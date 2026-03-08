@@ -27,6 +27,8 @@ body {
   --secondary-color: #92836e;
   --background-dark: #0a0a0a;
   --panel-dark: #111111;
+  --form-bg: #1a1a1a;
+  --input-bg: #222222;
 }
 
 /* Hero section */
@@ -53,6 +55,33 @@ body {
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
   z-index: 0;
+}
+
+/* Navigation bar */
+.navbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem 2rem;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+}
+
+.navbar a {
+  color: var(--primary-color);
+  text-decoration: none;
+  margin-left: 1rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.navbar a:hover {
+  color: #e1c78c;
+  text-decoration: underline;
 }
 
 .hero-content {
@@ -195,6 +224,80 @@ footer {
   text-align: center;
   font-size: 0.9rem;
   color: #777777;
+}
+
+/* Support page styles */
+.support-hero {
+  background-color: var(--panel-dark);
+  padding: 6rem 2rem 3rem;
+  text-align: center;
+}
+
+.support-hero h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.support-hero p {
+  font-size: 1rem;
+  color: #cccccc;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Support form */
+#support-form {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+#support-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.form-group input,
+.form-group textarea {
+  background-color: var(--input-bg);
+  color: #dddddd;
+  border: 1px solid #333333;
+  border-radius: 0.3rem;
+  padding: 0.75rem;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+/* Button style reuse */
+button.btn {
+  align-self: flex-start;
+  cursor: pointer;
+}
+
+/* Social links in CTA - adjust spacing */
+#cta .social-links {
+  margin-top: 0.5rem;
 }
 
 /* Responsive adjustments */
